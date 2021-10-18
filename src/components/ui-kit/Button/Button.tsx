@@ -2,7 +2,7 @@ import React from 'react';
 import cn from 'classnames';
 import styles from './Button.module.scss';
 
-interface IButton {
+interface IButtonProps {
   children: React.ReactNode;
   variant?: 'primary' | 'transparent' | 'text';
   disabled?: boolean;
@@ -10,7 +10,7 @@ interface IButton {
   onClick?: () => void;
 }
 
-const Button: React.FC<IButton> = ({
+const Button: React.FC<IButtonProps> = ({
   children,
   variant = 'primary',
   disabled,

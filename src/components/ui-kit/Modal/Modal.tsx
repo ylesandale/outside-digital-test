@@ -1,13 +1,13 @@
 import React from 'react';
 import styles from './Modal.module.scss';
 
-interface IModal {
+interface IModalProps {
   children: React.ReactNode;
   open: boolean;
   onClose: () => void;
 }
 
-const Modal: React.FC<IModal> = ({ children, open, onClose }) => {
+const Modal: React.FC<IModalProps> = ({ children, open, onClose }) => {
   if (open) {
     return (
       <div className={styles.container}>
