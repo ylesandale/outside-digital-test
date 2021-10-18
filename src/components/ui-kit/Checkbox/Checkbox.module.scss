@@ -1,0 +1,62 @@
+@import 'styles/variables.scss';
+
+.checkbox {
+  box-sizing: border-box;
+  display: flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid $lightGray2;
+}
+
+.checkboxIcon {
+  padding: 4px 3px;
+  width: 14px;
+  height: 11px;
+
+  path {
+    transition: fill 0.25s;
+    fill: transparent;
+  }
+}
+
+.label {
+  display: inline-flex;
+  align-items: flex-start;
+  cursor: pointer;
+
+  input {
+    display: none;
+  }
+
+  &.checked .checkbox {
+    background: linear-gradient(
+        255.35deg,
+        #dc3131 0.83%,
+        rgba(255, 79, 79, 0) 108.93%
+      ),
+      #ff5e56;
+    border: none;
+
+    path {
+      fill: $white;
+    }
+
+    &.disabled .checkboxIcon path {
+      fill: $white;
+    }
+  }
+
+  &.disabled .checkbox {
+    border: none;
+    background: $lightGray1;
+
+    path {
+      fill: $white;
+    }
+  }
+
+  &:hover:not(.checked) .checkbox {
+    border-color: $black;
+  }
+}

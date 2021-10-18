@@ -1,0 +1,49 @@
+@import 'styles/variables.scss';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.title {
+  margin: 0 0 16px;
+  color: $black;
+  font-weight: 500;
+}
+
+.checkbox {
+  position: relative;
+  align-items: center;
+  width: 100%;
+
+  &:after {
+    display: block;
+    content: '';
+    position: absolute;
+    height: 1px;
+    bottom: -15px;
+    left: 0;
+    width: 100%;
+    background: $lightGray2;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 32px;
+  }
+}
+
+.checkboxText {
+  color: $black;
+  margin: 2.5px 0 0 10px;
+
+  span {
+    color: $gray;
+  }
+}
+
+@media (max-width: $mdBreakpoint) {
+  .title {
+    max-width: 150px;
+  }
+}

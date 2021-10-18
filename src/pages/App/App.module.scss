@@ -1,0 +1,51 @@
+@import 'styles/variables.scss';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.modalTitle {
+  margin: 0 0 16px;
+  font-size: 28px;
+  line-height: 40px;
+  color: $black;
+  font-weight: 500;
+}
+
+.modalSubtitle {
+  margin: 0 0 24px;
+  color: $gray;
+  max-width: 425px;
+}
+
+.calculateButton {
+  margin: 12px 0 24px;
+  font-size: 14px;
+}
+
+.menu {
+  margin-bottom: 40px;
+}
+
+@media (max-width: $xlBreakpoint) {
+  .modalSubtitle {
+    white-space: pre-line;
+  }
+}
+
+@media (max-width: $mdBreakpoint) {
+  .modalTitle {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .modalSubtitle {
+    font-size: 12px;
+    line-height: 16px;
+    max-width: 288px;
+    white-space: normal;
+  }
+}

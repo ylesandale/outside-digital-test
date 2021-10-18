@@ -1,0 +1,36 @@
+@import '~normalize.css';
+@import './fonts';
+@import './variables.scss';
+
+body {
+  font-size: 14px;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Lab Grotesque';
+  font-weight: 400;
+  color: $white;
+  background: linear-gradient(
+      255.35deg,
+      #dc3131 0.83%,
+      rgba(255, 79, 79, 0) 108.93%
+    ),
+    #ff5e56;
+  box-shadow: 0px -0.11px 16.9495px rgba(183, 187, 225, 0.33);
+}
+
+.container {
+  max-width: $xlContent;
+  padding: 0 32px;
+  margin: 0 auto;
+
+  @media (max-width: $xlBreakpoint) {
+    max-width: $mdContent;
+    padding: 0 16px;
+  }
+
+  @media (max-width: $mdBreakpoint) {
+    max-width: 100%;
+    padding: 0 16px;
+  }
+}

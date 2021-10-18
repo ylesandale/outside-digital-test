@@ -1,0 +1,77 @@
+@import 'styles/variables.scss';
+
+.button {
+  border-radius: 6px;
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  color: $white;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  transition: all 0.2s ease-in-out;
+
+  &.primary {
+    width: 100%;
+    padding: 16px 0;
+    background: linear-gradient(
+        255.35deg,
+        #dc3131 0.83%,
+        rgba(255, 79, 79, 0) 108.93%
+      ),
+      #ff5e56;
+    box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
+    border: none;
+
+    &:hover,
+    &:active {
+      background: $red;
+    }
+  }
+
+  &.transparent {
+    max-width: 200px;
+    padding: 16px 32px;
+    border: 1px solid $white;
+    background: transparent;
+    box-shadow: 0px -0.11px 16.9495px rgba(183, 187, 225, 0.33);
+
+    &:hover,
+    &:active {
+      color: $black;
+      background: $white;
+    }
+  }
+
+  &:disabled {
+    box-shadow: none;
+    background: $lightGray1;
+  }
+
+  &.text {
+    padding: 0;
+    background: transparent;
+    border: none;
+    color: $red;
+
+    &:hover {
+      color: $orange;
+    }
+  }
+}
+
+@media (max-width: $mdBreakpoint) {
+  .button {
+    font-size: 12px;
+    line-height: 16px;
+
+    &.primary {
+      padding: 12px 0;
+    }
+
+    &.transparent {
+      max-width: 151px;
+      padding: 11px 24px;
+    }
+  }
+}
